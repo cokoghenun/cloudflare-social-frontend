@@ -10,7 +10,7 @@ const Home = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    await fetch('http://social-backend.cokoghenun15.workers.dev/posts', {
+    await fetch(`${process.env.REACT_APP_SERVER_URL}/posts`, {
       method: 'POST',
       body: JSON.stringify({ username, title, content }),
     });

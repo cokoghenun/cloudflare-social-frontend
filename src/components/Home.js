@@ -6,7 +6,7 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       const resp = await fetch(
-        'https://social-backend.cokoghenun15.workers.dev/posts'
+        `${process.env.REACT_APP_SERVER_URL}/posts`
       );
       const postsResp = await resp.json();
       setPosts(postsResp);
